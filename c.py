@@ -6,4 +6,4 @@ def call_person(*people):
         print("This is", person)
 
 
-call_person("Ignat", "Nick", "And so on...")
+call_person("Ignat", "Nick", "And so on...")  # we can add as many is we like
