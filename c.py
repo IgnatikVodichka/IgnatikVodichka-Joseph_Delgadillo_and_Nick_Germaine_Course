@@ -1,3 +1,5 @@
+
+
 # "infinite" number of arguments:
 
 def call_person(*people):

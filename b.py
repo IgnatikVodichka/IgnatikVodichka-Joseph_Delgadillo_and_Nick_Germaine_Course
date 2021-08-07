@@ -1,3 +1,5 @@
+
+
 # default arguments will be printed if we will not pass them in function later on when we will be calling it
 def print_something(name="Someone", age="Unknown"):  # <-- default arguments
     # if we will concatenate here with "+" sign then with number entered in argument later it won't work. the we will have to wrap it into a str() finction

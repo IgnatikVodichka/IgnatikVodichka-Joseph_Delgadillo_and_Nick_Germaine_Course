@@ -1,5 +1,6 @@
 import re
 
+
 print("Calculator")
 print("Type 'quit' to exit\n")
 
