@@ -28,11 +28,13 @@ def perform_math():
             try:
                 previous = eval(equation)
             except (SyntaxError, ZeroDivisionError):
+                print("Can't devide by zero")
                 pass
         else:
             try:
                 previous = eval(str(previous) + equation)
             except (SyntaxError, ZeroDivisionError):
+                print("Can't devide by zero")
                 pass
 
 
