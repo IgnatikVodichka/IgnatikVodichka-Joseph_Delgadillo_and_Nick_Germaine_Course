@@ -15,9 +15,9 @@ class bcolors:
 class Person:
 
     def __init__(self, hp, mp, attack, defence, magic):
-        self.maxhp = hp
+        self.max_hp = hp
         self.hp = hp
-        self.maxmp = mp
+        self.max_mp = mp
         self.mp = mp
         self.attack_low = attack - random.randrange(5, 15)
         self.attack_high = attack + random.randrange(5, 15)
@@ -38,3 +38,38 @@ class Person:
         if self.hp < 0:
             self.hp = 0
         return self.hp
+
+    def reduce_mp(self, mp_cost):
+        self.mp -= mp_cost
+
+    def get_hp(self):
+        return self.hp
+
+    def get_max_hp(self):
+        return self.max_hp
+
+    def get_mp(self):
+        return self.mp
+
+    def get_max_mp(self):
+        return self.max_mp
+
+    def get_spell_name(self, i):
+        return self.magic[i]["name"]
+
+    def get_spell_mp_cost(self, i):
+        return self.magic[i]["cost"]
+
+    def choose_action(self):
+        i = 1
+        print(f"{bcolors.OKBLUE}{bcolors.BOLD}Actions: {bcolors.ENDC}")
+        for item in self.action:
+            print(f"{str(i)}: {item} ")
+            i += 1
+
+    def choose_spell(self):
+        i = 1
+        print(f"{bcolors.OKBLUE}{bcolors.BOLD}Magic Spells: {bcolors.ENDC}")
+        for spell in self.magic:
+            print(f"{str(i)}: {spell['name']} MP cost: {spell['cost']}")
+            i += 1
